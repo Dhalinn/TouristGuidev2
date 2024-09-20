@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:href="@{/main.css}" rel="stylesheet">
+    <title>Tags for Attraction</title>
+</head>
+<body>
+<h1 th:text="'Tags for ' + ${attractionName}">Tags</h1>
+<ul>
+    <li th:each="tag : ${tags}" th:text="${tag}">Tag</li>
+</ul>
+<!-- tilbage til listen -->
+<a href="/attractions"><button>Back</button></a>
+</body>
+</html>
